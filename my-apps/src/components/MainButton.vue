@@ -5,7 +5,7 @@
 </script>
 
 <template>
-    <button @click="showName">It's Example</button>
+    <button @click="showName">Just example</button>
 </template>
 
 <style scoped></style>

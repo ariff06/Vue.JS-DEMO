@@ -18,5 +18,5 @@
 
 <template>
     <h1>{{ firstName }}{{ middleName }}{{ lastName }}</h1>
-    <button @click="showName">Perlihatkan Nama!</button>    
+    <button @click="showName">Show name !</button>    
 </template>
