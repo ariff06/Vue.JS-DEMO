@@ -9,7 +9,9 @@ const idBlog = 'blog-01'
 
 <template>
   <!-- With MainButton -->
-  <MainButton></MainButton>
+  <MainButton />
+  <MainButton />
+  <MainButton />
   <p>Mr. {{ firstName }} {{ middleName }} {{ lastName }}</p>
   <!-- Added at main.js -->
   <CompositionComponents />
