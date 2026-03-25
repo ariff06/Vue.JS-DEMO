@@ -1,9 +1,16 @@
 <script setup>
     const fullName = "Arif Achmad Fauzy"
-    const isLoading = true
+    const isLoading = false
     const buttonAttr = {
         disabled: isLoading,
         id: 1
+    }
+    const renderIsLoading = () => {
+        if (isLoading) {
+            return 'Loading'
+        } else {
+            return 'Sumbit'
+        }
     }
 
     const showName = () => console.log(fullName)
@@ -11,7 +18,7 @@
 
 <template>
     <button v-bind="buttonAttr" :id="`id-${buttonAttr.id}`" @click="showName">
-        {{ isLoading ? 'Loading' : 'Submit'}}
+        {{ renderIsLoading() }}
     </button>
 </template>
 
