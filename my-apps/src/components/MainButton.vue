@@ -13,13 +13,17 @@
             return 'Sumbit'
         }
     }
-    const url = '/home'
+    const url = {
+        attr: 'href',
+        linkOne: '/home',
+        linkTwo: '/dashboard'
+    }
 
     const showName = () => console.log(fullName)
 </script>
 
 <template>
-    <a :href="url">
+    <a :[url.attr]="url.linkTwo">
         <button v-bind="buttonAttr" :id="`id-${buttonAttr.id}`" @click="showName">
             {{ renderIsLoading() }}
         </button>
