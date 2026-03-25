@@ -2,6 +2,7 @@
     const fullName = "Arif Achmad Fauzy"
     const isLoading = false
     const buttonAttr = {
+        type: 'button',
         disabled: isLoading,
         id: 1
     }
@@ -12,14 +13,17 @@
             return 'Sumbit'
         }
     }
+    const url = '/home'
 
     const showName = () => console.log(fullName)
 </script>
 
 <template>
-    <button v-bind="buttonAttr" :id="`id-${buttonAttr.id}`" @click="showName">
-        {{ renderIsLoading() }}
-    </button>
+    <a :href="url">
+        <button v-bind="buttonAttr" :id="`id-${buttonAttr.id}`" @click="showName">
+            {{ renderIsLoading() }}
+        </button>
+    </a>
 </template>
 
 <style scoped></style>
